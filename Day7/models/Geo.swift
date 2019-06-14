@@ -11,5 +11,6 @@ import Foundation
 struct Geo
 {
     var lat: String?
-    var long: String?
+    var lng: String?
+    
 }

@@ -31,25 +31,36 @@ func readJsonFile(jsonFileName : String)
         {
             print(email)
         }
-        
+        var user = user()
         if let username = jsonDictionary["username"] as? String
             {
                 print(username)
             }
             
-        if (jsonDictionary["address"] as? Dictionary<String, Any>) != nil
+        if let addressDict = jsonDictionary["address"] as? Dictionary<String, Any>)
                 {
                     if let city = jsonDictionary["City"] as? String
                     {
                         print(city)
+                        Address.city = city
                     }
+                    
+                    
+                    var geo : Geo
                     
                     //read geo dictionary here
                 }
-        if let jsonDictionary = json as? [String:Any]
-        {
-            
         }
-    }
 }
 readJsonFile(jsonFileName: "user")
+
+func readTextFile(fileName: String)
+{
+    let url = Bundle.main.url(forResource: "Sample", withExtension: "txt")
+    {
+        do{
+            let text = try String()
+        }
+    }
+    
+}
